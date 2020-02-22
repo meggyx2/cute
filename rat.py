@@ -12,7 +12,7 @@ import random
 import json
 import requests
 
-from cv.py import *
+from cv import *
 
 # LOADING COMMANDS:
 import commands.say
