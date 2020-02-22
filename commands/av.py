@@ -24,7 +24,7 @@ async def avatar_error(error, ctx):
 	elif isinstance(error, commands.BadArgument):
 		await ctx.send(f"**{ctx.message.author.name}** either you're drunk or i'm retarded, cuz no member like that exists.")
 	else:
-		print('Ignoring exception in command {}:'.format(ctx.command), file=sys.stderr)
+		print('Ignoring exception in command av:', file=sys.stderr)
 		traceback.print_exception(type(error), error, error.__traceback__, file=sys.stderr)
 		embed = discord.Embed(description="{}".format(error), color=0x000000)
 		await ctx.send("uh, oops, i guess?", embed=embed)
