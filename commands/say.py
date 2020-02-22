@@ -31,3 +31,5 @@ async def say_error(error, ctx):
         traceback.print_exception(type(error), error, error.__traceback__, file=sys.stderr)
 		embed = discord.Embed(description="{}".format(error), color=0x000000)
 		await ctx.send("uh, oops, i guess?", embed=embed)
+
+		
