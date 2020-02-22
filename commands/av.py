@@ -11,14 +11,14 @@ from cv import *
 
 @bot.command(aliases=["av", "ava", "a", "showmeoffdaddy", "myav"])
 async def avatar(ctx, user: discord.Member):
-	embed = discord.Embed(description="{.mention}".format(user), color=0x + int(random.choice(colorsEmbed)))
+	embed = discord.Embed(description="{.mention}".format(user), color=0x + random.choice(colorsEmbed))
 	embed.set_image(url=user.avatar_url)
 	await ctx.send(embed=embed)
 	
 @avatar.error
 async def avatar_error(ctx, error):
 	if isinstance(error, commands.MissingRequiredArgument):
-		embed = discord.Embed(description="{.mention}".format(ctx.message.author), color=0x + int(random.choice(colorsEmbed)))
+		embed = discord.Embed(description="{.mention}".format(ctx.message.author), color=0x + random.choice(colorsEmbed))
 		embed.set_image(url=ctx.message.author.avatar_url)
 		await ctx.send(embed=embed)
 	elif isinstance(error, commands.BadArgument):
