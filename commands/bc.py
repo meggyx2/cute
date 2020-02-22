@@ -19,7 +19,7 @@ async def bc(ctx):
 	# under this is just for fun
 	def check2(m):
 		return m.channel == ctx.message.channel
-	msg = await client.wait_for('message', check=check)
+	msg = await bot.wait_for('message', check=check)
 	await msg.add_reaction("<a:speedclean:653273382812647425>")
 	
 @bc.error
