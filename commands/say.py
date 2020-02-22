@@ -23,7 +23,10 @@ async def say_error(ctx, error):
 		if len(message) > 0:
 			await ctx.send(f"{message}")
 	elif isinstance(error, commands.BadArgument):
-		await ctx.send(f"**{ctx.message.author.name}** that channel doesn't even exist, what are you doing?")
+		message = ctx.message[5:]
+		await ctx.message.delete()
+		if len(message) > 0:
+			await ctx.send(f"{message}")
 	elif isinstance(error, commands.CheckFailure):
 		await ctx.send("f**{ctx.message.author.name}** you don't have the **administrator** perms, duh.")
 	else:
