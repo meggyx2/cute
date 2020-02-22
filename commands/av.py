@@ -16,7 +16,7 @@ async def avatar(ctx, user: discord.Member):
 	await ctx.send(embed=embed)
 	
 @avatar.error
-async def avatar_error(error, ctx):
+async def avatar_error(ctx, error):
 	if isinstance(error, commands.MissingRequiredArgument):
 		embed = discord.Embed(description="{.mention}".format(ctx.message.author), color=random.choice(colorsEmbed))
 		embed.set_image(url=ctx.message.author.avatar_url)
