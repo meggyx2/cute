@@ -14,5 +14,19 @@ async def avatar(ctx, user: discord.Member):
 	embed = discord.Embed(description="{.mention}".format(user), color=random.choice(colorsEmbed))
 	embed.set_image(url=user.avatar_url)
 	await ctx.send(embed=embed)
+	
+@avatar.error
+async def avatar_error(error, ctx):
+	if isinstance(error, commands.MissingRequiredArgument):
+		embed = discord.Embed(description="{.mention}".format(ctx.message.author), color=random.choice(colorsEmbed))
+		embed.set_image(url=ctx.message.author.avatar_url)
+		await ctx.send(embed=embed)
+	elif isinstance(error, commands.BadArgument):
+		await ctx.send(f"**{ctx.message.author.name}** either you're drunk or i'm retarded, cuz no member like that exists.")
+	else:
+		print('Ignoring exception in command {}:'.format(ctx.command), file=sys.stderr)
+		traceback.print_exception(type(error), error, error.__traceback__, file=sys.stderr)
+		embed = discord.Embed(description="{}".format(error), color=0x000000)
+		await ctx.send("uh, oops, i guess?", embed=embed)
 
 	
