@@ -7,7 +7,7 @@ import asyncio
 import datetime
 import json
 from datetime import datetime
-from cv.py import *
+from cv import *
 
 @bot.command(aliases=["av", "ava", "a", "showmeoffdaddy", "myav"])
 async def avatar(ctx, user: discord.Member):
