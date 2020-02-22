@@ -27,7 +27,7 @@ async def bc_error(error, ctx):
 	if isinstance(error, commands.CheckFailure):
 		await ctx.send("f**{ctx.message.author.name}** you don't have the **manage messages** perms, duh.")
 	else:
-		print('Ignoring exception in command {}:'.format(ctx.command), file=sys.stderr)
+		print('Ignoring exception in command bc:', file=sys.stderr)
 		traceback.print_exception(type(error), error, error.__traceback__, file=sys.stderr)
 		embed = discord.Embed(description="{}".format(error), color=0x000000)
 		await ctx.send("uh, oops, i guess?", embed=embed)
