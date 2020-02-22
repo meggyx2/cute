@@ -6,7 +6,7 @@ import traceback
 import asyncio
 import datetime
 import json
-from cv.py import *
+from cv import *
 from datetime import datetime
 
 @bot.command()
