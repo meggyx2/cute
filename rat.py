@@ -15,6 +15,7 @@ import requests
 from cv.py import *
 
 # LOADING COMMANDS:
+import commands.say
 
 @bot.event
 async def on_ready():
