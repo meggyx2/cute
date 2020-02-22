@@ -23,7 +23,7 @@ async def bc(ctx):
 	await msg.add_reaction("<a:speedclean:653273382812647425>")
 	
 @bc.error
-async def bc_error(error, ctx):
+async def bc_error(ctx, error):
 	if isinstance(error, commands.CheckFailure):
 		await ctx.send("f**{ctx.message.author.name}** you don't have the **manage messages** perms, duh.")
 	else:
