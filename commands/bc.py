@@ -7,7 +7,7 @@ import asyncio
 import datetime
 import json
 from datetime import datetime
-from cv.py import *
+from cv import *
 
 @bot.command(aliases=["botclear", "botclean", "clean", "clear", "fuckoffbots"])
 @commands.has_permissions(manage_messages=True)
