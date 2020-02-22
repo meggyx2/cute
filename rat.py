@@ -14,6 +14,8 @@ import requests
 
 from cv.py import *
 
+# LOADING COMMANDS:
+
 @bot.event
 async def on_ready():
 	print("rat is ready")
