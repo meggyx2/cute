@@ -16,6 +16,8 @@ from cv.py import *
 
 # LOADING COMMANDS:
 import commands.say
+import commands.bc
+import commands.av
 
 @bot.event
 async def on_ready():
