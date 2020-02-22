@@ -21,3 +21,14 @@ async def bc(ctx):
 		return m.channel == ctx.message.channel
 	msg = await client.wait_for('message', check=check)
 	await msg.add_reaction("<a:speedclean:653273382812647425>")
+	
+@bc.error
+async def bc_error(error, ctx):
+	if isinstance(error, commands.CheckFailure):
+		await ctx.send("f**{ctx.message.author.name}** you don't have the **manage messages** perms, duh.")
+	else:
+		print('Ignoring exception in command {}:'.format(ctx.command), file=sys.stderr)
+		traceback.print_exception(type(error), error, error.__traceback__, file=sys.stderr)
+		embed = discord.Embed(description="{}".format(error), color=0x000000)
+		await ctx.send("uh, oops, i guess?", embed=embed)
+	
