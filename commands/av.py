@@ -14,3 +14,5 @@ async def avatar(ctx, user: discord.Member):
 	embed = discord.Embed(description="{.mention}".format(user), color=random.choice(colorsEmbed))
 	embed.set_image(url=user.avatar_url)
 	await ctx.send(embed=embed)
+
+	
