@@ -16,7 +16,7 @@ async def say(ctx, chan: discord.TextChannel, *, msg: str):
 	await chan.send(f"{msg}")
 	
 @say.error
-async def say_error(error, ctx):
+async def say_error(ctx, error):
 	if isinstance(error, commands.MissingRequiredArgument):
 		message = ctx.message[5:]
 		await ctx.message.delete()
