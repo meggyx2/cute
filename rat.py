@@ -23,6 +23,7 @@ import commands.magicball
 #
 import commands.reactions.blush
 import commands.reactions.poke
+import commands.reactions.pat
 
 @bot.event
 async def on_ready():
