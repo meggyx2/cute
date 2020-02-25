@@ -22,7 +22,7 @@ responses = [
     "Probably not"
 ]
 
-@bpt.command(name="8ball", aliases=["ball", "q"])
+@bot.command(name="8ball", aliases=["ball", "q"])
 async def magicball(ctx, *, question: str):
 	embed1 = discord.Embed(description="❓ **{}**\n\n. . .".format(question), color=0xFFFFFF)
 	msg = await ctx.send("The ball is thinking...", embed=embed1)
