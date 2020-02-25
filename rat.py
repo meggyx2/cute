@@ -24,6 +24,7 @@ import commands.magicball
 import commands.reactions.blush
 import commands.reactions.poke
 import commands.reactions.pat
+import commands.reactions.slap
 
 @bot.event
 async def on_ready():
