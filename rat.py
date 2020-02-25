@@ -19,7 +19,7 @@ import commands.say
 import commands.bc
 import commands.av
 import commands.ship
-import commands.8ball
+import commands.magicball
 #
 import commands.reactions.blush
 
