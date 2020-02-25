@@ -40,7 +40,7 @@ async def poke_error(ctx, error):
 	elif isinstance(error, commands.BadArgument):
 		embed = discord.Embed(description="**babi** pokes 👉 **{.message.author.name}**.".format(ctx), color=0xFFFFFF, timestamp=datetime.utcnow())
 		embed.set_image(url=random.choice(poke))
-		await ctx.send(f"**{ctx.message.author.name}** member not found, I poked you instead**embed=embed)
+		await ctx.send(f"**{ctx.message.author.name}** member not found, I poked you instead**", embed=embed)
 	else:
 		print('Ignoring exception in command av:', file=sys.stderr)
 		traceback.print_exception(type(error), error, error.__traceback__, file=sys.stderr)
