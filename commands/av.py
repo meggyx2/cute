@@ -14,6 +14,7 @@ async def avatar(ctx, user: discord.Member):
 	embed = discord.Embed(description="{.mention}".format(user), color=0xFFFFFF)
 	embed.set_image(url=user.avatar_url)
 	await ctx.send(embed=embed)
+	await ctx.message.delete()
 	
 @avatar.error
 async def avatar_error(ctx, error):
@@ -21,6 +22,7 @@ async def avatar_error(ctx, error):
 		embed = discord.Embed(description="{.mention}".format(ctx.message.author), color=0xFFFFFF)
 		embed.set_image(url=ctx.message.author.avatar_url)
 		await ctx.send(embed=embed)
+		await ctx.message.delete()
 	elif isinstance(error, commands.BadArgument):
 		await ctx.send(f"**{ctx.message.author.name}** either you're drunk or i'm retarded, cuz no member like that exists.")
 	else:
