@@ -18,16 +18,18 @@ async def ship(ctx, match1: discord.Member, match2: discord.Member):
 async def ship_error(ctx, error):
 	if isinstance(error, commands.MissingRequiredArgument):
 		match1 = ctx.message.author
-		match2 = await commands.MemberConverter().convert(ctx, ctx.message.content[6:])
-		if match2 is None:
+		try:
+			match2 = await commands.MemberConverter().convert(ctx, ctx.message.content[6:])
+		except:
 			await ctx.send(f"**{match1.name}** you didn't give me at least 1 correct member to match you with, tward")
 			return
 		percent = randint(0, 100)
 		await ctx.send(f"**{match1.name}** is a **__{str(percent)}%__** match with **{match2.name}**! ❤️")
 	elif isinstance(error, commands.BadArgument):
 		match1 = ctx.message.author
-		match2 = await commands.MemberConverter().convert(ctx, ctx.message.content[6:])
-		if match2 is None:
+		try:
+			match2 = await commands.MemberConverter().convert(ctx, ctx.message.content[6:])
+		except:
 			await ctx.send(f"**{match1.name}** you didn't give me at least 1 correct member to match you with, tward")
 			return
 		percent = randint(0, 100)
