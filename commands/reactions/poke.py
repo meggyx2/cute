@@ -7,7 +7,7 @@ import random
 from datetime import datetime
 from cv import *
 
-poke = [
+poke_gifs = [
     "https://cdn.discordapp.com/attachments/670153232039018516/674299333100961813/b.gif",
     "https://cdn.discordapp.com/attachments/670153232039018516/674299332790583306/a.gif",
 		"https://cdn.discordapp.com/attachments/670153232039018516/674299336569389056/c.gif",
@@ -28,18 +28,18 @@ poke = [
 @bot.command()
 async def poke(ctx, user: discord.Member):
 	embed = discord.Embed(description="**{.message.author.name}** pokes 👉 **{.name}**.".format(ctx, user), color=0xFFFFFF, timestamp=datetime.utcnow())
-	embed.set_image(url=random.choice(poke))
+	embed.set_image(url=random.choice(poke_gifs))
 	await ctx.send(embed=embed)
 	
 @poke.error
 async def poke_error(ctx, error):
 	if isinstance(error, commands.MissingRequiredArgument):
 		embed = discord.Embed(description="**babi** pokes 👉 **{.message.author.name}**.".format(ctx), color=0xFFFFFF, timestamp=datetime.utcnow())
-		embed.set_image(url=random.choice(poke))
+		embed.set_image(url=random.choice(poke_gifs))
 		await ctx.send(embed=embed)
 	elif isinstance(error, commands.BadArgument):
 		embed = discord.Embed(description="**babi** pokes 👉 **{.message.author.name}**.".format(ctx), color=0xFFFFFF, timestamp=datetime.utcnow())
-		embed.set_image(url=random.choice(poke))
+		embed.set_image(url=random.choice(poke_gifs))
 		await ctx.send(f"**{ctx.message.author.name}** member not found, I poked you instead**", embed=embed)
 	else:
 		print('Ignoring exception in command av:', file=sys.stderr)
