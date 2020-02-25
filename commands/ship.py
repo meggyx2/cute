@@ -11,7 +11,7 @@ from cv import *
 
 @bot.command()
 async def ship(ctx, match1: discord.Member, match2: discord.Member):
-	percent = randint(0, 100)
+	percent = random.randint(0, 100)
 	await ctx.send(f"**{match1.name}** is a **__{str(percent)}%__** match with **{match2.name}**! ❤️")
 	
 @ship.error
@@ -23,7 +23,7 @@ async def ship_error(ctx, error):
 		except:
 			await ctx.send(f"**{match1.name}** you didn't give me at least 1 correct member to match you with, tward")
 			return
-		percent = randint(0, 100)
+		percent = random.randint(0, 100)
 		await ctx.send(f"**{match1.name}** is a **__{str(percent)}%__** match with **{match2.name}**! ❤️")
 	elif isinstance(error, commands.BadArgument):
 		match1 = ctx.message.author
@@ -32,7 +32,7 @@ async def ship_error(ctx, error):
 		except:
 			await ctx.send(f"**{match1.name}** you didn't give me at least 1 correct member to match you with, tward")
 			return
-		percent = randint(0, 100)
+		percent = random.randint(0, 100)
 		await ctx.send(f"**{match1.name}** is a **__{str(percent)}%__** match with **{match2.name}**! ❤️")
 	else:
 		print('Ignoring exception in command ship:', file=sys.stderr)
