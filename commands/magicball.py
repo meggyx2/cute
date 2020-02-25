@@ -26,7 +26,7 @@ responses = [
 async def magicball(ctx, *, question: str):
 	embed1 = discord.Embed(description="❓ **{}**\n\n. . .".format(question), color=0xFFFFFF)
 	msg = await ctx.send("The ball is thinking...", embed=embed1)
-	await asyncio.sleep(randint(1, 3))
+	await asyncio.sleep(random.randint(1, 3))
 	embed2 = discord.Embed(description="❓ **{}**\n\n__{}__".format(question, random.choice(responses)), color=0xFFFFFF)
 	await msg.edit(content="Your question has been answered.", embed=embed2)
 	
