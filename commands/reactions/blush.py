@@ -37,6 +37,6 @@ blush_gifs = [
 @bot.command()
 async def blush(ctx):
 	gif = random.choice(blush_gifs)
-	embed = discord.Embed(descrpition="**{.author.name}** blushes. 😳".format(ctx), color=0xFFFFFF, timestamp=datetime.utcnow())
+	embed = discord.Embed(description="**{.author.name}** blushes. 😳".format(ctx), color=0xFFFFFF, timestamp=datetime.utcnow())
 	embed.set_image(url=gif)
 	await ctx.send(embed=embed)
