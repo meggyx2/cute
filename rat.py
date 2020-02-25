@@ -22,6 +22,7 @@ import commands.ship
 import commands.magicball
 #
 import commands.reactions.blush
+import commands.reactions.poke
 
 @bot.event
 async def on_ready():
