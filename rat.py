@@ -26,6 +26,8 @@ import commands.reactions.poke
 import commands.reactions.pat
 import commands.reactions.slap
 import commands.reactions.hug
+import commands.reactions.facepalm
+import commands.reactions.kiss
 
 @bot.event
 async def on_ready():
