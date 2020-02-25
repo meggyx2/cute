@@ -29,6 +29,7 @@ pat_gifs = [
 		"https://cdn.discordapp.com/attachments/670153232039018516/674300062024597514/B7g8Vh.gif",
 		"https://cdn.discordapp.com/attachments/670153232039018516/674300069696241684/source_1.gif",
 		"https://cdn.discordapp.com/attachments/670153232039018516/674300074557177892/source.gif"
+]
     
 @bot.command()
 async def pat(ctx, user: discord.Member):
