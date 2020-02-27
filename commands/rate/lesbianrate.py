@@ -7,7 +7,7 @@ import random
 from datetime import datetime
 from cv import *
 
-@bot.command(aliases=["howlesbian", "ratelesbian", "howlesbo")
+@bot.command(aliases=["howlesbian", "ratelesbian", "howlesbo"])
 async def lesbianrate(ctx, user: discord.Member):
 	await ctx.send(f"**{user.name}** is **__{int(random.randint(0, 100))}__**% lesbian! 🏳️‍🌈")
 
