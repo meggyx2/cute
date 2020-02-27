@@ -9,12 +9,12 @@ from cv import *
  
 @bot.command()
 async def sexyrate(ctx, user: discord.Member):
-    await ctx.send(f"**{user.name}** is **__{str(random.randint(0, 100)}__**% sexy! 😉")
+    await ctx.send(f"**{user.name}** is **__{str(random.randint(0, 100))}__**% sexy! 😉")
 
 @sexyrate.error
 async def sexyrate_error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
-        await ctx.send(f"**{ctx.message.author.name}** is **__{str(random.randint(0, 100)}__**% sexy! 😉")
+        await ctx.send(f"**{ctx.message.author.name}** is **__{str(random.randint(0, 100))}__**% sexy! 😉")
     elif isinstance(error, commands.BadArgument):
         embed = discord.Embed(color=0xFFFFFF)
         embed.set_footer(text="Member not found.")
