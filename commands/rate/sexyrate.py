@@ -7,7 +7,7 @@ import random
 from datetime import datetime
 from cv import *
  
-@bot.command()
+@bot.command(aliases=["howsexy", "howhot"])
 async def sexyrate(ctx, user: discord.Member):
     await ctx.send(f"**{user.name}** is **__{str(random.randint(0, 100))}__**% sexy! 😉")
 
