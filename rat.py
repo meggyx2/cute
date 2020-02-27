@@ -20,6 +20,7 @@ import commands.bc
 import commands.av
 import commands.ship
 import commands.magicball
+import commands.afk
 #
 import commands.reactions.blush
 import commands.reactions.poke
