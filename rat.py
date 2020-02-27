@@ -30,7 +30,7 @@ import commands.reactions.facepalm
 import commands.reactions.kiss
 #
 import commands.rate.sexyrate
-#import commands.rate.cuterate
+import commands.rate.cuterate
 import commands.rate.thotrate
 
 @bot.event
