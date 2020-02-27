@@ -11,7 +11,7 @@ from cv import *
 async def cuterate(ctx, user: discord.Member):
 	await ctx.send(f"**{user.name}** is **__{int(random.randint(0, 100))}__**% cute!")
 
-@cuterate.error
+#@cuterate.error
 async def cuterate_error(ctx, error):
 	if isinstance(error, commands.MissingRequiredArgument):
 		await ctx.send(f"**{ctx.message.author.name}** is **__{int(random.randint(0, 100))}__**% cute!")
