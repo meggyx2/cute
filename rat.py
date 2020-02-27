@@ -28,6 +28,10 @@ import commands.reactions.slap
 import commands.reactions.hug
 import commands.reactions.facepalm
 import commands.reactions.kiss
+#
+import commands.rate.sexyrate
+import commands.rate.cuterate
+import commands.rate.thotrate
 
 @bot.event
 async def on_ready():
