@@ -16,8 +16,9 @@ async def on_message(message):
 		mentionedMember = mainMessage.mentions[0]
 		if mentionedMember.nick.startswith("[AFK]"):
 			await ctx.send(f"{mainMessage.author.mention}, **{mentionedMember.display_name}** is currently AFK.")
-	elif mainMessage.author.display_name.startswith("[AFK]"):
-		await mainMessage.author.edit(nick="{}".format(mainMessage.author.nick[6:]))
-		await ctx.send(f"Welcome back, {mainMessage.author.display_name}!")
+	elif mainMessage.author.nick is not None:
+		if mainMessage.author.nick.startswith("[AFK]"):
+			await mainMessage.author.edit(nick="{}".format(mainMessage.author.nick[6:]))
+			await ctx.send(f"Welcome back, {mainMessage.author.display_name}!")
 
 	await bot.process_commands(message)
