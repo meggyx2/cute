@@ -21,6 +21,7 @@ import commands.av
 import commands.ship
 import commands.magicball
 import commands.afk
+import commands.status
 #
 import commands.reactions.blush
 import commands.reactions.poke
