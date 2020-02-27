@@ -32,6 +32,9 @@ import commands.reactions.kiss
 import commands.rate.sexyrate
 import commands.rate.cuterate
 import commands.rate.thotrate
+import commands.rate.gayrate
+import commands.rate.lesbianrate
+import commands.rate.hotrate
 
 @bot.event
 async def on_ready():
