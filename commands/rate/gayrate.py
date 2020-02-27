@@ -9,12 +9,12 @@ from cv import *
  
 @bot.command(aliases=["howgay", "rategay"])
 async def gayrate(ctx, user: discord.Member):
-    await ctx.send(f"**{user.name}** is **__{int(random.randint(0, 100)}__**% gay! 🏳️‍🌈")
+    await ctx.send(f"**{user.name}** is **__{int(random.randint(0, 100))}__**% gay! 🏳️‍🌈")
 
 @gayrate.error
 async def gayrate_error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
-        await ctx.send(f"**{ctx.message.author.name}** is **__{int(random.randint(0, 100)}__**% gay! 🏳️‍🌈")
+        await ctx.send(f"**{ctx.message.author.name}** is **__{int(random.randint(0, 100))}__**% gay! 🏳️‍🌈")
     elif isinstance(error, commands.BadArgument):
         embed = discord.Embed(color=0xFFFFFF)
         embed.set_footer(text="Member not found.")
