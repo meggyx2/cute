@@ -9,12 +9,12 @@ from cv import *
 
 @bot.command(aliases=["howcute", "howadorable"])
 async def cuterate(ctx, user: discord.Member):
-	await ctx.send(f"**{user.name}** is **__{int(random.randint(0, 100)}__**% cute!")
+	await ctx.send(f"**{user.name}** is **__{int(random.randint(0, 100))}__**% cute!")
 
 @cuterate.error
 async def cuterate_error(ctx, error):
 	if isinstance(error, commands.MissingRequiredArgument):
-		await ctx.send(f"**{ctx.message.author.name}** is **__{int(random.randint(0, 100)}__**% cute!")
+		await ctx.send(f"**{ctx.message.author.name}** is **__{int(random.randint(0, 100))}__**% cute!")
 	elif isinstance(error, commands.BadArgument):
 		embed = discord.Embed(color=0xFFFFFF)
 		embed.set_footer(text="Member not found.")
