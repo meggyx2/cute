@@ -11,7 +11,7 @@ from cv import *
 async def thotrate(ctx, user: discord.Member):
 	await ctx.send(f"**{user.name}** is **__{int(random.randint(0, 100))}__**% a thot!")
 
-@cuterate.error
+@thotrate.error
 async def thotrate_error(ctx, error):
 	if isinstance(error, commands.MissingRequiredArgument):
 		await ctx.send(f"**{ctx.message.author.name}** is **__{int(random.randint(0, 100))}__**% a thot!")
