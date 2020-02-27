@@ -14,8 +14,9 @@ async def on_message(message):
 	mainMessage = message
 	if len(mainMessage.mentions) > 0:
 		mentionedMember = mainMessage.mentions[0]
-		if mentionedMember.nick.startswith("[AFK]"):
-			await mainMessage.channel.send(f"{mainMessage.author.mention}, **{mentionedMember.display_name}** is currently AFK.")
+		if mentionedMember.nick is not None:
+			if mentionedMember.nick.startswith("[AFK]"):
+				await mainMessage.channel.send(f"{mainMessage.author.mention}, **{mentionedMember.display_name}** is currently AFK.")
 	elif mainMessage.author.nick is not None:
 		if mainMessage.author.nick.startswith("[AFK]"):
 			await mainMessage.author.edit(nick="{}".format(mainMessage.author.nick[6:]))
