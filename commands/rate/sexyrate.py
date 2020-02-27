@@ -9,7 +9,7 @@ from cv import *
  
 @bot.command()
 async def sexyrate(ctx, user: discord.Member):
-    await ctx.send(f"**{user.name}** is **__{int(random.randint(0, 100)}__**% sexy! 😉")
+    await ctx.send(f"**{user.name}** is **__{str(random.randint(0, 100)}__**% sexy! 😉")
 
 @sexyrate.error
 async def sexyrate_error(ctx, error):
