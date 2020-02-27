@@ -25,7 +25,7 @@ async def bc(ctx):
 @bc.error
 async def bc_error(ctx, error):
 	if isinstance(error, commands.CheckFailure):
-		await ctx.send("f**{ctx.message.author.name}** you don't have the **manage messages** perms, duh.")
+		await ctx.send(f"**{ctx.message.author.name}** you don't have the **manage messages** perms, duh.")
 	else:
 		print('Ignoring exception in command bc:', file=sys.stderr)
 		traceback.print_exception(type(error), error, error.__traceback__, file=sys.stderr)
