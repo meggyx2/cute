@@ -12,7 +12,7 @@ from cv import *
 @bot.command()
 async def snipe(ctx):
 	try:
-		to_slice = snipe_msgs[str(ctx.message.channel.id)
+		to_slice = snipe_msgs[str(ctx.message.channel.id)]
 		sniping = to_slice.split("|")
 	except:
 		await ctx.send(f"**{ctx.message.author.display_name}** there's nothing to snipe??")
