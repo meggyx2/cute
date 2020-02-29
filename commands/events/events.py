@@ -27,3 +27,4 @@ async def on_message(message):
 @bot.event
 async def on_message_delete(message):
 	snipe_msgs[str(message.channel.id)] = "{}|{}|{}".format(message.content, message.author.id, datetime.utcnow())
+	print(snipe_msgs)
