@@ -22,6 +22,7 @@ async def snipe(ctx):
 	except:
 		await ctx.send(f"**{ctx.message.author.display_name}** uh, it looks like the author of the message you're trying to snipe left the server. L")
 		return
-	embed = discord.Embed(title="{}".format(author.name), description="{}".format(sniping[0]), color=0xFFFFFF, timestamp=snipe_msgs_time[str(ctx.message.channel.id)])
+	embed = discord.Embed(description="{}".format(sniping[0]), color=0xFFFFFF, timestamp=snipe_msgs_time[str(ctx.message.channel.id)])
+	embed.set_author(name="{}".format(author.name), icon_url=author.avatar_url)
 	await ctx.send(embed=embed)
 	
