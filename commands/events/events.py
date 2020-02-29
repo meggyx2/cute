@@ -21,6 +21,10 @@ async def on_message(message):
 		if mainMessage.author.nick.startswith("[AFK]"):
 			await mainMessage.author.edit(nick="{}".format(mainMessage.author.nick[6:]))
 			await mainMessage.channel.send(f"Welcome back, **{mainMessage.author.display_name}**!")
+	elif mainMessage == "pls snipe":
+		await ctx.send(f"**{mainMessage.author.display_name}** the command is now ``*snipe``.")
+	elif mainMessage == "pls editsnipe":
+		await ctx.send(f"**{mainMessage.author.display_name}** the command is now ``*editsnipe``.")
 			
 	await bot.process_commands(message)
 			
