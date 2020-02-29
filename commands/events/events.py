@@ -25,6 +25,18 @@ async def on_message(message):
 	await bot.process_commands(message)
 			
 @bot.event
+async def on_member_join(member):
+	if member.guild.id == 631921445987156019:
+		memberCount = bot.get_channel(665508950996680705)
+		await memberCount.edit(name="babies: {}".format(member.guild.member_count))
+		
+@bot.event
+async def on_member_remove(member):
+	if member.guild.id == 631921445987156019:
+		memberCount = bot.get_channel(665508950996680705)
+		await memberCount.edit(name="babies: {}".format(member.guild.member_count))
+		
+@bot.event
 async def on_message_delete(message):
 	snipe_msgs[str(message.channel.id)] = "{}|{}".format(message.content, message.author.id)
 	snipe_msgs_time[str(message.channel.id)] = datetime.utcnow()
