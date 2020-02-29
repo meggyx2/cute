@@ -32,4 +32,4 @@ async def on_message_delete(message):
 @bot.event
 async def on_message_edit(before, after):
 	editsnipe_msgs[str(after.channel.id)] = "{}|{}".format(after.content, after.author.id)
-	editsnipe_msgs_time[str(message.channel.id)] = datetime.utcnow()
+	editsnipe_msgs_time[str(after.channel.id)] = datetime.utcnow()
