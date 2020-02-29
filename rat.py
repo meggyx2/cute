@@ -22,6 +22,7 @@ import commands.ship
 import commands.magicball
 import commands.afk
 import commands.status
+import commands.snipe
 #
 import commands.reactions.blush
 import commands.reactions.poke
