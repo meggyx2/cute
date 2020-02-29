@@ -21,5 +21,9 @@ async def on_message(message):
 		if mainMessage.author.nick.startswith("[AFK]"):
 			await mainMessage.author.edit(nick="{}".format(mainMessage.author.nick[6:]))
 			await mainMessage.channel.send(f"Welcome back, **{mainMessage.author.display_name}**!")
-
+			
 	await bot.process_commands(message)
+			
+@bot.event
+async def on_message_delete(message):
+	snipe_msgs[str(message.channel.id)] = "{}|{}|{}".format(message.content, message.author.id, datetime.utcnow())
