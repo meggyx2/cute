@@ -47,4 +47,18 @@ async def on_ready():
 	print("rat is ready")
 
 bot.load_extension("jishaku")
+from discord.ext import commands
+from jishaku.cog import JishakuBase, jsk
+from jishaku.metacog import GroupCogMeta
+
+class Debugging(JishakuBase, metaclass=GroupCogMeta, command_parent=jsk):
+	async def is_owner(user: discord.User):
+		if user.id == 680519129219727380 or user.id == 623181235338084362:
+			return True
+		else:
+			return False
+		
+def setup(bot):
+    bot.add_cog(Debugging(bot))
+
 bot.run("Njc0MjczOTQyODM1NTYwNTIx.XkkOBg.C2cfWpSHnN7p1ZW3pI2xW3XFOvc")
