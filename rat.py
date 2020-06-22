@@ -52,7 +52,7 @@ from jishaku.cog import JishakuBase, jsk
 from jishaku.metacog import GroupCogMeta
 
 class Debugging(JishakuBase, metaclass=GroupCogMeta, command_parent=jsk):
-	async def is_owner(user: discord.User):
+	async def is_owner(self, user: discord.User):
 		if user.id == 680519129219727380 or user.id == 623181235338084362:
 			return True
 		else:
