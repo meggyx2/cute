@@ -6,7 +6,7 @@ import requests
 import json
 
 bot = commands.Bot(command_prefix="*", case_insensitive=True)
-bot.owner_ids = [680519129219727380, 623181235338084362]
+bot.owner_ids = {680519129219727380, 623181235338084362}
 
 snipe_msgs = {}
 snipe_msgs_time = {}
