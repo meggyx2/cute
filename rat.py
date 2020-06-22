@@ -46,4 +46,5 @@ import commands.events.events
 async def on_ready():
 	print("rat is ready")
 
+bot.load_extension("jishaku")
 bot.run("Njc0MjczOTQyODM1NTYwNTIx.XkkOBg.C2cfWpSHnN7p1ZW3pI2xW3XFOvc")
