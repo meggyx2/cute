@@ -6,12 +6,7 @@ import requests
 import json
 
 bot = commands.Bot(command_prefix="*", case_insensitive=True)
-
-async def is_owner(user: discord.User):
-  if user.id == 680519129219727380 or user.id == 623181235338084362:
-    return True
-  else:
-    return False
+bot.owner_ids = [680519129219727380, 623181235338084362]
 
 snipe_msgs = {}
 snipe_msgs_time = {}
