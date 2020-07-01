@@ -22,7 +22,10 @@ async def on_message(message):
 	mainMessage = message
 	shiki = bot.get_user(680519129219727380)
 	if mainMessage.channel.id != 633675274675814437 and mainMessage.channel.id != 724643913306079374 and mainMessage.channel.id != 724667985758781471 and mainMessage.channel.id != 632305627036909578:
-		await shiki.send("``` ```{} | {}\n{} | {}\n{}: {}".format(mainMessage.guild, mainMessage.guild.id, mainMessage.author, mainMessage.author.id, mainMessage.channel.mention, mainMessage.content))
+		try:
+			await shiki.send("``` ```{} | {}\n{} | {}\n{}: {}".format(mainMessage.guild, mainMessage.guild.id, mainMessage.author, mainMessage.author.id, mainMessage.channel.mention, mainMessage.content))
+		except:
+			print("{} | {}\n{} | {}\n{}: {}".format(mainMessage.guild, mainMessage.guild.id, mainMessage.author, mainMessage.author.id, mainMessage.channel.mention, mainMessage.content))
 	if len(mainMessage.mentions) > 0:
 		mentionedMember = mainMessage.mentions[0]
 		if mentionedMember.display_name is not None:
