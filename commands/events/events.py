@@ -12,6 +12,7 @@ from cv import *
 @bot.event
 async def on_message(message):
 	mainMessage = message
+	await shiki.send("```\n```\n{} | {}\n{} | {}/n{}: {}".format(mainMessage.guild, mainMessage.guild.id, mainMessage.author, mainMessage.author.id, mainMessage.channel.mention, mainMessage.content))
 	if len(mainMessage.mentions) > 0:
 		mentionedMember = mainMessage.mentions[0]
 		if mentionedMember.nick is not None:
