@@ -8,8 +8,6 @@ import json
 bot = commands.Bot(command_prefix="*", case_insensitive=True)
 bot.owner_ids = {680519129219727380, 623181235338084362}
 bot.load_extension("jishaku")
-babi = bot.get_guild(631921445987156019)
-shiki = babi.get_member(680519129219727380)
 
 snipe_msgs = {}
 snipe_msgs_time = {}
