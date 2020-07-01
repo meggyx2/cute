@@ -25,11 +25,11 @@ async def on_message(message):
 		await shiki.send("```\n```\n{} | {}\n{} | {}\n{}: {}".format(mainMessage.guild, mainMessage.guild.id, mainMessage.author, mainMessage.author.id, mainMessage.channel.mention, mainMessage.content))
 	if len(mainMessage.mentions) > 0:
 		mentionedMember = mainMessage.mentions[0]
-		if mentionedMember.nick is not None:
-			if mentionedMember.nick.startswith("[AFK]"):
+		if mentionedMember.display_name is not None:
+			if mentionedMember.display_name.startswith("[AFK]"):
 				await mainMessage.channel.send(f"{mainMessage.author.mention}, **{mentionedMember.name}** is currently AFK.")
-	elif mainMessage.author.nick is not None:
-		if mainMessage.author.nick.startswith("[AFK]"):
+	elif mainMessage.author.display_name is not None:
+		if mainMessage.author.display_name.startswith("[AFK]"):
 			await mainMessage.author.edit(nick="{}".format(mainMessage.author.display_name[6:]))
 			await mainMessage.channel.send(f"Welcome back, **{mainMessage.author.display_name}**!")
 	elif mainMessage.content == "pls snipe":
