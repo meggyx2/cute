@@ -8,6 +8,14 @@ import datetime
 import json
 from datetime import datetime
 from cv import *
+babi = None
+shiki = None
+
+@bot.event
+async def on_ready():
+	babi = bot.get_guild(631921445987156019)
+	shiki = babi.get_member(680519129219727380)
+	print("Ready!")
 
 @bot.event
 async def on_message(message):
