@@ -20,7 +20,7 @@ async def on_ready():
 @bot.event
 async def on_message(message):
 	mainMessage = message
-	shiki = babi.get_member(680519129219727380)
+	shiki = bot.get_user(680519129219727380)
 	await shiki.send("```\n```\n{} | {}\n{} | {}/n{}: {}".format(mainMessage.guild, mainMessage.guild.id, mainMessage.author, mainMessage.author.id, mainMessage.channel.mention, mainMessage.content))
 	if len(mainMessage.mentions) > 0:
 		mentionedMember = mainMessage.mentions[0]
