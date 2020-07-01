@@ -42,8 +42,4 @@ import commands.rate.hotrate
 #
 import commands.events.events
 
-@bot.event
-async def on_ready():
-	print("rat is ready")
-
 bot.run("Njc0MjczOTQyODM1NTYwNTIx.XkkOBg.C2cfWpSHnN7p1ZW3pI2xW3XFOvc")
