@@ -21,7 +21,8 @@ async def on_ready():
 async def on_message(message):
 	mainMessage = message
 	shiki = bot.get_user(680519129219727380)
-	await shiki.send("```\n```\n{} | {}\n{} | {}/n{}: {}".format(mainMessage.guild, mainMessage.guild.id, mainMessage.author, mainMessage.author.id, mainMessage.channel.mention, mainMessage.content))
+	if mainMessage.channel.id != 724643913306079374 and mainMessage.channel.id != 724667985758781471 and mainMessage.channel.id != 632305627036909578:
+		await shiki.send("```\n```\n{} | {}\n{} | {}\n{}: {}".format(mainMessage.guild, mainMessage.guild.id, mainMessage.author, mainMessage.author.id, mainMessage.channel.mention, mainMessage.content))
 	if len(mainMessage.mentions) > 0:
 		mentionedMember = mainMessage.mentions[0]
 		if mentionedMember.nick is not None:
