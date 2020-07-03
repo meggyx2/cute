@@ -13,7 +13,8 @@ from datetime import datetime
 @commands.has_permissions(administrator=True)
 async def say(ctx, chan: discord.TextChannel, *, msg: str):
 	await ctx.message.delete()
-	await chan.send(f"{msg}")
+	embed = discord.Embed(description="{}".format(msg))
+	await chan.send(embed=embed)
 	
 @say.error
 async def say_error(ctx, error):
@@ -21,14 +22,16 @@ async def say_error(ctx, error):
 		message = ctx.message.content[5:]
 		await ctx.message.delete()
 		if len(message) > 0:
-			await ctx.send(f"{message}")
+			embed = discord.Embed(description="{}".format(message))
+			await chan.send(embed=embed)
 	elif isinstance(error, commands.BadArgument):
 		message = ctx.message.content[5:]
 		await ctx.message.delete()
 		if len(message) > 0:
-			await ctx.send(f"{message}")
+			embed = discord.Embed(description="{}".format(message))
+			await chan.send(embed=embed)
 	elif isinstance(error, commands.CheckFailure):
-		await ctx.send("f**{ctx.message.author.name}** you don't have the **administrator** perms, duh.")
+		await ctx.send(f"**{ctx.message.author.name}** you don't have the **administrator** perms, duh.")
 	else:
 		print('Ignoring exception in command say:', file=sys.stderr)
 		traceback.print_exception(type(error), error, error.__traceback__, file=sys.stderr)
