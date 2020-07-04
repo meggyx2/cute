@@ -15,4 +15,7 @@ async def afk(ctx):
 		return
 	else:
 		await ctx.send(f"**{ctx.message.author.display_name}** is now AFK. We'll be waiting for your return! I'll notify anyone who mentions you.")
-		await ctx.message.author.edit(nick="[AFK] {}".format(ctx.message.author.display_name))
+		try:
+			await ctx.message.author.edit(nick="[AFK] {}".format(ctx.message.author.display_name))
+		except:
+			pass
