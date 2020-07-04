@@ -18,4 +18,4 @@ async def afk(ctx):
 		try:
 			await ctx.message.author.edit(nick="[AFK] {}".format(ctx.message.author.display_name))
 		except:
-			pass
+			print(f"Couldn't change {ctx.message.author.display_name}'s name because it's too long (32 max char).")
