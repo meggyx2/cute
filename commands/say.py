@@ -23,13 +23,13 @@ async def say_error(ctx, error):
 		await ctx.message.delete()
 		if len(message) > 0:
 			embed = discord.Embed(description="{}".format(message))
-			await chan.send(embed=embed)
+			await ctx.channel.send(embed=embed)
 	elif isinstance(error, commands.BadArgument):
 		message = ctx.message.content[5:]
 		await ctx.message.delete()
 		if len(message) > 0:
 			embed = discord.Embed(description="{}".format(message))
-			await chan.send(embed=embed)
+			await ctx.channel.send(embed=embed)
 	elif isinstance(error, commands.CheckFailure):
 		await ctx.send(f"**{ctx.message.author.name}** you don't have the **administrator** perms, duh.")
 	else:
