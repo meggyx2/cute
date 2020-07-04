@@ -33,7 +33,10 @@ async def on_message(message):
 				await mainMessage.channel.send(f"{mainMessage.author.mention}, **{mentionedMember.display_name[6:]}** is currently AFK.")
 	elif mainMessage.author.display_name is not None:
 		if mainMessage.author.display_name.startswith("[AFK]"):
-			await mainMessage.author.edit(nick="{}".format(mainMessage.author.display_name[6:]))
+			try:
+				await mainMessage.author.edit(nick="{}".format(mainMessage.author.display_name[6:]))
+			except:
+				pass
 			await mainMessage.channel.send(f"Welcome back, **{mainMessage.author.display_name}**!")
 	elif mainMessage.content == "pls snipe":
 		await mainMessage.channel.send(f"**{mainMessage.author.display_name}** the command is now ``*snipe``.")
