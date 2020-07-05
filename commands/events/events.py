@@ -51,6 +51,7 @@ def fetch_top_members():
 
 @bot.event
 async def on_ready():
+	await bot.change_presence(status=discord.Status.online, activity=discord.Activity(name='BOOST BABI!!', type=discord.ActivityType.listening))
 	global countmessages
 	global storage
 	global trigger_chan
