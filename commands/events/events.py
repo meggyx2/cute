@@ -134,6 +134,8 @@ async def on_message(message):
 			await shiki.send("``` ```{} | {}\n{} | {}\n{}: {}".format(mainMessage.guild, mainMessage.guild.id, mainMessage.author, mainMessage.author.id, mainMessage.channel.mention, mainMessage.content))
 		except:
 			print("{} | {}\n{} | {}\n{}: {}".format(mainMessage.guild, mainMessage.guild.id, mainMessage.author, mainMessage.author.id, mainMessage.channel.mention, mainMessage.content))
+	if mainMessage.content == "*pic" or mainMessage.content == "*picperms" or mainMessage.content == "*picperm":
+		await mainMessage.channel.send("**How do I get pic perms :question:**\n\nTo get pic perms you need to be either level 5 or boosting (at least 1 boost). Until you reach one of the requirements, you may use <#724667985758781471> to send images. If you're above level 5 but still don't have pic perms, please @mention an admin and they'll give them to you.\n\nTo check your level, do ``/r``.")
 	if len(mainMessage.mentions) > 0:
 		mentionedMember = mainMessage.mentions[0]
 		if mentionedMember.display_name is not None:
