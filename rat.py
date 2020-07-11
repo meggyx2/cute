@@ -32,7 +32,7 @@ import commands.reactions.slap
 import commands.reactions.hug
 import commands.reactions.facepalm
 import commands.reactions.kiss
-import commands.reactions.lick
+ # - import commands.reactions.lick
 #
 import commands.rate.sexyrate
 import commands.rate.cuterate
