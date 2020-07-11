@@ -138,7 +138,7 @@ async def on_message(message):
 		await mainMessage.channel.send("**How do I get pic perms :question:**\n\nTo get pic perms you need to be either level 5 or boosting (at least 1 boost). Until you reach one of the requirements, you may use <#724667985758781471> to send images. If you're above level 5 but still don't have pic perms, please @mention an admin and they'll give them to you.\n\nTo check your level, do ``/r``.")
 	if mainMessage.content == "*mir":
 		embed = discord.Embed(color=0x000000)
-		embed.set_image(url="https://tenor.com/view/jason-momoa-thats-true-true-dat-yess-aquaman-gif-13291623")
+		embed.set_image(url="https://cdn.discordapp.com/attachments/725437460468727960/731313414059720724/videotogif_2020.07.11_02.57.57.gif")
 		await mainMessage.channel.send(embed=embed)
 	if len(mainMessage.mentions) > 0:
 		mentionedMember = mainMessage.mentions[0]
