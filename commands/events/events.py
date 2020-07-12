@@ -129,7 +129,7 @@ async def on_message(message):
 			msgidinstorage[mid] = a.id
 		if mid not in updatemsg:
 			updatemsg.append(mid)
-	if mainMessage.channel.id != 724670558368956486 and mainMessage.author.bot == False and mainMessage.channel.id != 633675274675814437 and mainMessage.channel.id != 724643913306079374 and mainMessage.channel.id != 724667985758781471 and mainMessage.channel.id != 632305627036909578:
+	if mainMessage.channel.id != 728729088323223563 and mainMessage.channel.id != 724670558368956486 and mainMessage.author.bot == False and mainMessage.channel.id != 633675274675814437 and mainMessage.channel.id != 724643913306079374 and mainMessage.channel.id != 724667985758781471 and mainMessage.channel.id != 632305627036909578:
 		try:
 			await shiki.send("``` ```{} | {}\n{} | {}\n{}: {}".format(mainMessage.guild, mainMessage.guild.id, mainMessage.author, mainMessage.author.id, mainMessage.channel.mention, mainMessage.content))
 		except:
