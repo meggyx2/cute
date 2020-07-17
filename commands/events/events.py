@@ -156,8 +156,11 @@ async def on_message(message):
 		await mainMessage.channel.send(f"**{mainMessage.author.display_name}** the command is now ``*snipe``.")
 	elif mainMessage.content == "pls editsnipe":
 		await mainMessage.channel.send(f"**{mainMessage.author.display_name}** the command is now ``*editsnipe``.")
-			
-	await bot.process_commands(message)
+	if mainMessage.author.id == 583697027481731082 or mainMessage.author.id == 579987805560897537:
+		aawit mainMessage.channel.send(f"**{mainMessage.author.name}**, you're temporary banned from using any commands on this bot.")
+		return
+	else:
+		await bot.process_commands(message)
 	
 @bot.command(aliases=["r"])
 @commands.cooldown(1, 10, commands.BucketType.user)
