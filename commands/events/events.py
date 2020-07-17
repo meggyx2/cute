@@ -156,7 +156,7 @@ async def on_message(message):
 		await mainMessage.channel.send(f"**{mainMessage.author.display_name}** the command is now ``*snipe``.")
 	elif mainMessage.content == "pls editsnipe":
 		await mainMessage.channel.send(f"**{mainMessage.author.display_name}** the command is now ``*editsnipe``.")
-	if mainMessage.author.id == 583697027481731082 or mainMessage.author.id == 579987805560897537:
+	if (mainMessage.author.id == 583697027481731082 or mainMessage.author.id == 579987805560897537) and mainMessage.content.startswith("*"):
 		await mainMessage.channel.send(f"**{mainMessage.author.name}**, you're temporary banned from using any commands on this bot.")
 		return
 	else:
